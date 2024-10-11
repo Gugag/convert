@@ -1,0 +1,99 @@
+/* Button styling (applies to both Convert Image and Download buttons) */
+button, .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;  /* Remove underline for download link */
+    display: inline-block;   /* Make sure it behaves like a button */
+}
+
+button:hover, .button:hover {
+    background-color: #0056b3;
+}
+
+/* Container and form styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* General styling for input and select */
+input[type="file"], select {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 60%;
+    appearance: none;  /* Remove default arrow */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none;    /* For Firefox */
+    background-color: white;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    position: relative;
+    padding-right: 40px; /* Space for custom arrow */
+}
+
+/* Wrapper to make sure select has proper positioning */
+select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 24 24%22 fill%3D%22none%22 stroke%3D%22%23000000%22 stroke-width%3D%222%22 stroke-linecap%3D%22round%22 stroke-linejoin%3D%22round%22%3E%3Cpolyline points%3D%226 9 12 15 18 9%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+/* For narrow down arrow */
+select::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    pointer-events: none; /* Ensure clicks go to the select, not the arrow */
+    color: black;
+    font-size: 12px;
+}
+
+
+p {
+    margin-top: 20px;
+}
+
+#downloadLink {
+    margin-top: 20px;
+}
